@@ -1,0 +1,67 @@
+:root {
+  --bg-light: #fdfdfd;
+  --triangle-gold: #eabf49;
+  --triangle-fade: rgba(234, 191, 73, 0.3);
+  --text-accent: #444;
+  --text-glow: rgba(234, 191, 73, 0.5);
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-accent);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.loader-wrapper {
+  text-align: center;
+}
+
+.triangle-loader {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid var(--triangle-gold);
+  opacity: 0.4;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.triangle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.triangle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+    border-bottom-color: var(--triangle-fade);
+  }
+}
+
+.loading-text {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-accent);
+  text-shadow: 0 0 8px var(--text-glow);
+}
