@@ -1,6 +1,6 @@
 # TriangleLoader (Copilot) 
 
-![My Screenshot](Images/Image1.png)
+![My Screenshot](Images/Image1.PNG)
 
 "TriangleLoader" is a refined and visually engaging loading animation built around a dynamic trio of pulsing triangles.
 
